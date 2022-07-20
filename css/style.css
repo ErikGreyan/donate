@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Comfortaa", cursive;
+}
+
+/* Body Style */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #253467;
+}
+
+::selection {
+  color: #fff;
+  background: #253467;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #253467;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Box Style */
+  /* Image Style */
+}
+.container .container_item {
+  width: 40%;
+  margin-left: 10vw;
+  /* Box Items Click Active */
+  /* Lorem text */
+  /* Giving options */
+  /* I would like to give class */
+  /* Submit Form */
+}
+.container .container_item h2 {
+  color: #253467;
+  margin-bottom: 10px;
+}
+.container .container_item .box_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .container_item .box_items .box_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.container .container_item .box_items .box_item ion-icon {
+  font-size: 35px;
+  color: #c6c6c6;
+  margin-right: 10px;
+}
+.container .container_item .box_items .box_item span {
+  color: #253467;
+}
+.container .container_item .box_items .box_item.active {
+  border-color: #05b4e9;
+}
+.container .container_item .box_items .box_item.active ion-icon {
+  color: #253467;
+}
+.container .container_item p {
+  margin-bottom: 20px;
+}
+.container .container_item .giving {
+  margin-bottom: 20px;
+}
+.container .container_item .giving h4 {
+  color: #253467;
+  margin-bottom: 15px;
+}
+.container .container_item .giving .button button {
+  border: 3px solid #c6c6c6;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  color: #253467;
+}
+.container .container_item .giving .button button.active {
+  border-color: #05b4e9;
+}
+.container .container_item .giving_dollar h4 {
+  color: #253467;
+  margin-bottom: 15px;
+}
+.container .container_item .giving_dollar .button {
+  margin-bottom: 20px;
+}
+.container .container_item .giving_dollar .button button {
+  border: 3px solid #c6c6c6;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  color: #253467;
+  margin-bottom: 10px;
+}
+.container .container_item .giving_dollar .button button.active {
+  border-color: #05b4e9;
+}
+.container .container_item .giving_dollar .button input {
+  padding-left: 10px;
+  border: 2px solid #c6c6c6;
+  padding: 10px 20px;
+  outline: 0;
+  border-radius: 3px;
+  display: none;
+}
+.container .container_item .giving_dollar .button input:focus {
+  border-color: #05b4e9;
+  color: #05b4e9;
+}
+.container .container_item .giving_dollar .button input:focus::-moz-placeholder {
+  color: #05b4e9;
+}
+.container .container_item .giving_dollar .button input:focus:-ms-input-placeholder {
+  color: #05b4e9;
+}
+.container .container_item .giving_dollar .button input:focus::placeholder {
+  color: #05b4e9;
+}
+.container .container_item .giving_dollar .button input.active {
+  display: block;
+}
+.container .container_item .giving_dollar .button button.active:nth-child(4) + input {
+  display: block;
+}
+.container .container_item label {
+  color: #253467;
+}
+.container .container_item input[type=submit] {
+  background: #05b4e9;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-weight: bold;
+  border: 2px solid #05b4e9;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.container .container_item input[type=submit]:hover {
+  background: transparent;
+  color: #253467;
+}
+.container .container_img {
+  width: 600px;
+  height: 100vh;
+  background: url(../img/img.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    /* Box Style */
+    /* Image Style */
+  }
+  .container .container_item {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .container .container_img {
+    width: 100%;
+    background-position: top;
+  }
+}/*# sourceMappingURL=style.css.map */

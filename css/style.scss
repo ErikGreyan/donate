@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Comfortaa", cursive;
+}
+
+$title: #253467;
+$text: #05b4e9;
+$color: #c6c6c6;
+
+/* Body Style */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+::selection {
+    color: #fff;
+    background: $title;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: $title;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* Box Style */
+    .container_item {
+        width: 40%;
+        margin-left: 10vw;
+
+        h2 {
+            color: $title;
+            margin-bottom: 10px;
+        }
+
+        /* Box Items Click Active */
+        .box_items {
+            @include flex();
+
+            .box_item {
+                @include flex();
+                border: 2px solid transparent;
+                padding: 10px;
+                margin: 10px;
+                cursor: pointer;
+                border-radius: 3px;
+
+                ion-icon {
+                    font-size: 35px;
+                    color: $color;
+                    margin-right: 10px;
+                }
+
+                span {
+                    color: $title;
+                }
+
+                &.active {
+                    border-color: $text;
+
+                    ion-icon {
+                        color: $title;
+                    }
+                }
+            }
+        }
+
+        /* Lorem text */
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Giving options */
+        .giving {
+            margin-bottom: 20px;
+
+            h4 {
+                color: $title;
+                margin-bottom: 15px;
+            }
+
+            .button {
+                button {
+                    border: 3px solid $color;
+                    padding: 10px;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    background: transparent;
+                    color: $title;
+
+                    &.active {
+                        border-color: $text;
+                    }
+                }
+            }
+        }
+
+        /* I would like to give class */
+        .giving_dollar {
+            h4 {
+                color: $title;
+                margin-bottom: 15px;
+            }
+
+            .button {
+                margin-bottom: 20px;
+
+                button {
+                    border: 3px solid $color;
+                    padding: 10px 20px;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    background: transparent;
+                    color: $title;
+                    margin-bottom: 10px;
+
+                    &.active {
+                        border-color: $text;
+                    }
+                }
+
+                input {
+                    padding-left: 10px;
+                    border: 2px solid $color;
+                    padding: 10px 20px;
+                    outline: 0;
+                    border-radius: 3px;
+                    display: none;
+
+                    &:focus {
+                        border-color: $text;
+                        color: $text;
+                    }
+
+                    &:focus::placeholder {
+                        color: $text;
+                    }
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                button.active:nth-child(4)+input {
+                    display: block;
+                }
+            }
+        }
+
+        label {
+            color: $title;
+        }
+
+        /* Submit Form */
+        input[type=submit] {
+            background: $text;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-weight: bold;
+            border: 2px solid $text;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                background: transparent;
+                color: $title;
+            }
+        }
+    }
+
+    /* Image Style */
+    .container_img {
+        width: 600px;
+        height: 100vh;
+        background: url(../img/img.jpg) no-repeat;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+
+        /* Box Style */
+        .container_item {
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Image Style */
+        .container_img {
+            width: 100%;
+            background-position: top;
+        }
+    }
+}
